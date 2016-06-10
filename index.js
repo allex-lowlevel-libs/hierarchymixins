@@ -10,7 +10,7 @@ module.exports = function (inherit, DList, Gettable, Settable) {
     DestroyableParent:DestroyableParent,
     Parent:Parent,
     StaticChild:StaticChild,
-    Child:require('./Child.js')(inherit),
+    Child:require('./Child.js')(inherit, DestroyableChild),
     StaticParent:StaticParent
   };
 };
