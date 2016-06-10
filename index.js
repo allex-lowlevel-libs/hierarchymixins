@@ -1,4 +1,4 @@
-module.exports = function (inherit, DList, Gettable, Settable) {
+module.exports = function (exec, inherit, DList, Gettable, Settable) {
   'use strict';
   var StaticParent = require('./StaticParent')(DList,Gettable.get,Settable.set),
     StaticChild = require('./StaticChild.js')(),
