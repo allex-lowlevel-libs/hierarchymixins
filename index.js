@@ -1,10 +1,10 @@
-module.exports = function (exec, inherit, DList, Gettable, Settable) {
+module.exports = function (inherit, DList, Gettable, Settable) {
   'use strict';
   var StaticParent = require('./StaticParent')(DList,Gettable.get,Settable.set),
     StaticChild = require('./StaticChild.js')(),
     DestroyableChild = require('./DestroyableChild.js')(inherit, StaticChild),
     DestroyableParent = require('./DestroyableParent.js')(inherit,StaticParent),
-    Parent = require('./Parent')(exec,DestroyableParent);
+    Parent = require('./Parent')(inherit,DestroyableParent);
   return {
     DestroyableChild:DestroyableChild,
     DestroyableParent:DestroyableParent,
