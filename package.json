@@ -1,6 +1,6 @@
 {
   "name": "allex_hierarchymixinslowlevellib",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "JavaScript mixins for parent/child relationship(s)",
   "main": "index.js",
   "scripts": {
