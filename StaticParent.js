@@ -15,9 +15,13 @@ module.exports = function (DList,get,set) {
     this.__children = new DList();
   }
   StaticParent.prototype.__cleanUp = function(){
-    this.__children.traverse(this.destroyChild.bind(this));
+    this.purge();
     this.__children.destroy();
     this.__children = null;
+  };
+
+  StaticParent.prototype.purge = function () {
+    this.__children.traverse(this.destroyChild.bind(this));
   };
   StaticParent.prototype.addChild = function(child){
     var op = get(child,'__parent');
